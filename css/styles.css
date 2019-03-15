@@ -1,0 +1,236 @@
+body {
+	font: 15px/1.5 Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #eefafe;
+}
+
+/* Global */
+.container {
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+.highlight {
+	color: #103979;
+	font-weight: bold;
+}
+
+#togglebtn {
+	float: right;
+	font-family: inherit;
+	font-weight: bold;
+    background-color: Transparent;
+	color: #39c6de;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+#togglebtn:hover {
+	color: #bd6370;
+	font-weight: bold;
+}
+
+.dark {
+	padding: 15px;
+	background-color: #2c2e35;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* Header */
+
+header {
+	background-color: #eefafe;
+	color: #39c6de;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	min-height: 70px;
+	border-bottom: #bd6370 3px solid;
+}
+
+header a {
+	color: #39c6de;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 36px;
+	font-weight: bold;
+}
+
+header li {
+	float: left;
+	display: block;
+	padding: 0px 20px 0px 20px;
+}
+
+header #branding {
+	float: left;
+	width: 80%;
+}
+
+header #branding h1 {
+	margin: 0;
+}
+
+header #branding img {
+	padding: 0;
+	width: 50%;
+	height: auto;
+	float: left;
+}
+
+header nav {
+	float: right;
+	width: 220px;
+}
+
+header .current a {
+	color: #103979;
+	font-weight: bold;
+}
+
+header a:hover {
+	color: #bd6370;
+	font-weight: bold;
+}
+
+/* Showcase */
+#showcase {
+	min-height: 400px;
+	background: url("../img/showcase_unreal.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	text-shadow: 0px 0px 8px #ffffff;
+}
+
+#showcase h1 {
+	margin-top: 100px;
+	font-size: 55px;
+	margin-bottom: 10px;
+}
+
+#showcase p {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* Social */
+#social {
+	padding: 15px;
+	color: #ffffff;
+	background: #2c2e35;
+	border-top: #39c6de 3px solid;
+	border-bottom: #39c6de 3px solid;
+}
+
+#social h1 {
+	float: left;
+}
+
+#social #social-icons {
+	float: right;
+	margin-top: 15px;
+	font-size: 35px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+#social-icons a {
+	color: inherit;
+	text-decoration: none;
+}
+
+#social i:hover {
+	color: #39c6de;
+}
+
+/* Boxes */
+#boxes {
+	margin-top: 20px;
+}
+
+#boxes .box {
+	float: left;
+	width: 30%;
+	padding: 10px;
+	text-align: center;
+}
+
+#boxes .box img {
+	width: 100px;
+	height: auto;
+}
+
+#boxes .box i {
+	font-size: 103px;
+}
+
+#boxes .box i:hover {
+	color: #39c6de;
+}
+
+/* Contact Us page styling */
+#sidebar {
+	float: right;
+	width: 30%;
+}
+
+#sidebar .ticket-submit input, #sidebar .ticket-submit textarea {
+	width: 90%;
+	padding: 5px;
+}
+
+#main-content {
+	float: left;
+	width: 60%;
+}
+
+.ticket-button {
+	height: 28px;
+	background-color: #eefafe;
+	border: none;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #103979;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: bold;
+}
+
+.ticket-button:hover {
+	background-color: #bd6370;
+	color: #ffffff;
+}
+
+/* Footer */
+footer {
+	margin-top: 20px;
+	padding: 20px;
+	border-top: #39c6de 3px solid;
+	border-bottom:#39c6de 3px solid;
+	text-align: center;
+	color: #ffffff;
+	background-color: #2c2e35;
+}
+
+
+@font-face {
+  font-family: Arial;
+  src: url('Arial.eot'); /* Internet Exploder 9 Compat Modes */
+  src: url('Arial.eot?#iefix') format('embedded-opentype'), /* Internet Exploder 6-8 */
+       url('Arial.woff2') format('woff2'), /* Super Modern Browsers */
+       url('Arial.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Arial.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Arial.svg#svgFontName') format('svg'); /* Legacy iOS */
+}

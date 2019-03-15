@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+	<head>
+		<meta charset="utf-8"> <!-- Unicode web standard -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Enables the page to be responsive (mobile friendly) -->
+		
+		<!-- SEL meta tags. These can change at any time -->
+		<meta name="description" content=""> <!-- Get input from Ray -->
+		<meta name="keywords" content="video game developer, game studio, indie developer">
+		<meta name="author" content="Gibberish Productions LLC"> <!-- Ray has final say on author name -->
+		
+		<title>Gibberish Productions | Contact Us</title>
+		
+		<!-- Bootstrap stylesheet. Deactivated for the time being -->
+		<!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+		<!-- Font Awesome stylesheet -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+		<!-- Own stylesheet -->
+		<link rel="stylesheet" href="./css/styles.css">
+		
+		<script>
+			// Only start audio after the page has fully loaded
+			window.addEventListener("load", initAudio);
+			
+			var audio, toggle;
+			function initAudio() {
+				// Will play audio when the page fully loads
+				audio = new Audio();
+				audio.src = "./audio/weightless.mp3";
+				audio.loop - true;
+				audio.play();
+				
+				toggle = document.getElementById("togglebtn");
+				toggle.addEventListener("click", playPause);
+				
+				// Toggles the background music on and off
+				function playPause() {
+					if(audio.paused) {
+						audio.play();
+					} else {
+						// When toggled off, reset the time stamp
+						// Toggling audio again will play it from the beginning
+						audio.pause();
+						audio.currentTime = 0;
+					}
+				}
+			}
+		</script>
+		
+	</head>
+	
+	<body>
+	
+		<header>
+			
+			<!-- Where should this be placed? -->
+			<button id="togglebtn" style="font-size:20px;"><i class="fas fa-volume-up"></i><br>Toggle<br>Music</button>
+			
+			<div class="container">
+				<div id="branding">
+					<img src="./img/header_logo.png" alt="Gibberish Productions LLC name and logo">
+				</div>
+				
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="games.html">Games</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		
+		<section id="social" style="border-top:none;">
+			<div class="container">
+				<h1>Follow Us On Social Media</h1> <!-- Discord?, Facebook?, Twitter?, Any others? -->
+				<div id="social-icons">
+					<!-- All icons are just placeholders until final say is given. -->
+					<a href="https://discordapp.com/channels/534879482775994386/534879483342094367" target="_blank"><i class="fab fa-discord"></i></a>
+					<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+					<a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+					<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+					<!-- Instagram doesn't appear to link properly -->
+				</div>
+			</div>
+		</section>
+		
+		<section class="content">
+			<div class="container">
+				<article id="main-content">
+					<h1 style="font-size: 36px;">Contacting Us Directly</h1>
+					<h2>Are you using mods?</h2>
+					<p>We have no problem with people modding our games, but please be aware that you use mods on an "At your own risk" basis. If you're experiencing game crashes or freezes with mods installed, you need to troubleshoot what mods could be causing the issue and contact those authors. We cannot help you.</p>
+					<br>
+					
+					<h2>If you're not using mods</h2>
+					<p>If the FAQ page was unable to answer any of your questions, then you may contact us directly to receive specialized support. We work hard to make sure that you don't experience any problems, but they do happen occasionally. Before you submit your ticket, make sure that the email address is valid and that you can check it!</p>
+					<p>Tickets can take 24-48 hours to receive a reply. Duplicate tickets can slow this process down, so be sure you're only submitting the ticket once. When you contact support, please be sure to give us...</p>
+					
+					<ul style="list-style-type:square; padding-left:40px;">
+						<li>Your account name</li>
+						<li>Your "log.txt" file if you're experiencing crashes or game freezes</li>
+						<li>As much information as possible on the issue</li>
+					</ul>
+					
+					<p>We will <span style="font-weight:bold; font-style:oblique;">NEVER</span> ask you for...</p>
+					<ul style="list-style-type:square; padding-left:40px;">
+						<li>Your password</li>
+						<li>Your credit card information</li>
+					</ul>
+					<p>If we receive any of this, we will immediately delete your ticket.</p>
+				</article>
+				
+				<aside id="sidebar">
+					<section id="ticket-box">
+						<div class="dark" style="border:#bd6370 3px solid">
+							<h2 style="margin-top:0px; margin-bottom:0px;">Create your Ticket</h2>
+							<p style="margin-top:0px;">Please allow between 24 and 48 hours to receive a reply. If the issue is complex, your ticket may take longer to resolve.</p>
+							
+							<form class="ticket-submit">
+								<div>
+									<label>Email</label><br>
+									<input type="email" placeholder="Email address...">
+								</div>
+								
+								<div>
+									<label>Account Name</label><br>
+									<input type="text" placeholder="Account Name...">
+								</div>
+								
+								<div>
+									<label>Issue being Reported</label><br>
+									<input type="text" placeholder="Issue type...">
+								</div>
+								
+								<div>
+									<label>Upload File</label><br>
+									<input type="file">
+								</div>
+								
+								<div>
+									<label>Information</label><br>
+									<textarea placeholder="Tell us the problem..."></textarea>
+								</div>
+								
+								<button type="submit" class="ticket-button">Create Ticket</button>
+							</form>
+						</div>
+					</section>
+				</aside>
+			</div>
+		</section>
+		
+		<footer>
+			<p>&copy; 2019, Gibberish Productions LLC. All rights reserved. Unreal Engine and its logo are registered trademarks of Epic Games, Inc. in the US and elsewhere. Gibberish Productions LLC and its logo are registered trademarks within the US.</p>
+		</footer>
+		
+		<!-- Bootstraps required JavaScript plugins -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="./js/bootstrap.min.js"></script>
+	</body>
+</html>
