@@ -1,103 +1,197 @@
 <!DOCTYPE html>
-
 <html lang="en-US">
 
-	<head>
-		<meta charset="utf-8"> <!-- Unicode web standard -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Enables the page to be responsive (mobile friendly) -->
-		
-		<!-- SEL meta tags. These can change at any time -->
-		<meta name="description" content=""> <!-- Get input from Ray -->
-		<meta name="keywords" content="video game developer, game studio, indie developer">
-		<meta name="author" content="Gibberish Productions LLC"> <!-- Ray has final say on author name -->
-		
-		<title>Gibberish Productions | FAQ</title>
-		
-		<!-- Bootstrap stylesheet. Deactivated for the time being -->
-		<!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
-		<!-- Font Awesome stylesheet -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-		<!-- Own stylesheet -->
-		<link rel="stylesheet" href="./css/styles.css">
-		
-		<script>
-			// Only start audio after the page has fully loaded
-			window.addEventListener("load", initAudio);
-			
-			var audio, toggle;
-			function initAudio() {
-				// Will play audio when the page fully loads
-				audio = new Audio();
-				audio.src = "./audio/weightless.mp3";
-				audio.loop - true;
-				audio.play();
-				
-				toggle = document.getElementById("togglebtn");
-				toggle.addEventListener("click", playPause);
-				
-				// Toggles the background music on and off
-				function playPause() {
-					if(audio.paused) {
-						audio.play();
-					} else {
-						// When toggled off, reset the time stamp
-						// Toggling audio again will play it from the beginning
-						audio.pause();
-						audio.currentTime = 0;
-					}
-				}
-			}
-		</script>
-		
-	</head>
-	
-	<body>
-	
-		<header>
-			
-			<!-- Where should this be placed? -->
-			<button id="togglebtn" style="font-size:20px;"><i class="fas fa-volume-up"></i><br>Toggle<br>Music</button>
-			
-			<div class="container">
-				<div id="branding">
-					<img src="./img/header_logo.png" alt="Gibberish Productions LLC name and logo">
-				</div>
-				
-				<nav>
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="games.html">Games</a></li>
-						<li><a href="about.html">About</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		
-		<section id="social" style="border-top:none;">
-			<div class="container">
-				<h1>Follow Us On Social Media</h1> <!-- Discord?, Facebook?, Twitter?, Any others? -->
-				<div id="social-icons">
-					<!-- All icons are just placeholders until final say is given. -->
-					<a href="https://discordapp.com/channels/534879482775994386/534879483342094367" target="_blank"><i class="fab fa-discord"></i></a>
-					<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-					<a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-					<a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-					<!-- Instagram doesn't appear to link properly -->
-				</div>
-			</div>
-		</section>
-		
-		<section class="content">
-		
-		</section>
-		
-		<footer>
-			<p>&copy; 2019, Gibberish Productions LLC. All rights reserved. Unreal Engine and its logo are registered trademarks of Epic Games, Inc. in the US and elsewhere. Gibberish Productions LLC and its logo are registered trademarks within the US.</p>
-		</footer>
-		
-		<!-- Bootstraps required JavaScript plugins -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="./js/bootstrap.min.js"></script>
-	</body>
+<head>
+    <meta charset="utf-8"> <!-- Unicode web standard -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Enables the page to be responsive (mobile friendly) -->
+
+    <!-- SEL meta tags. These can change at any time -->
+    <meta name="description" content=""> <!-- Get input from Ray -->
+    <meta name="keywords" content="video game developer, game studio, indie developer">
+    <meta name="author" content="Gibberish Productions LLC"> <!-- Ray has final say on author name -->
+
+    <title>Gibberish Productions | FAQ</title>
+
+    <!-- Stylesheets -->
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+    <!-- Font Awesome stylesheet -->
+    <link rel="stylesheet" href="./fa/css/all.min.css">
+    <!-- Own stylesheet -->
+    <link rel="stylesheet" href="./css/in_house/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/showcase_logo.png">
+
+    <!-- Script for music button. Disabled for the time being -->
+    <!--
+    <script>
+        // Only start audio after the page has fully loaded
+        window.addEventListener("load", initAudio);
+
+        var audio, toggle;
+
+        function initAudio() {
+            // Will play audio when the page fully loads
+            audio = new Audio();
+            audio.src = "./audio/weightless.mp3";
+            audio.loop - true;
+            audio.play();
+
+            toggle = document.getElementById("togglebtn");
+            toggle.addEventListener("click", playPause);
+
+            // Toggles the background music on and off
+            function playPause() {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    // When toggled off, reset the time stamp
+                    // Toggling audio again will play it from the beginning
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+            }
+        }
+    </script>
+    -->
+</head>
+
+<body>
+
+    <!-- Where should this be placed? -->
+    <!--
+    <button id="togglebtn"><i class="fas fa-volume-up"></i><br>Toggle<br>Music</button>
+    -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="./img/header_logo.png" alt="Gibberish Productions LLC"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="NavbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="faq.html">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+		            <!--<li class="nav-item"><i class="fas fa-volume-up"></i> Music</li> Fix this -->
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Jumbotron -->
+    <div class="container-fluid">
+        <div class="row jumbotron">
+            <div class="col-12">
+                <h2 id="faq-h2">Need some technical help? Start here!</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordian style FAQ section -->
+    <div class="container-fluid faq-container">
+        <h2 class="my-2">Game Related</h2>
+        <hr class="dark">
+        <div class="accordian" id="faq-accordian">
+            <div class="card m-b-0">
+                <div class="card-header collapsed" aria-expanded="true" data-toggle="collapse" data-parent-"accordian" href="#card-1">
+                    <a class="card-title"><h3>My game is crashing!</h3></a>
+                </div>
+
+                <div class="card-block collapse" id="card-1">
+                    <p>First off, are you using mods? We have no problem with people using mods, however we will not provide any technical support for games that have mods installed. You'll have to troubleshoot if it is indeed a mod causing the problem.</p>
+                    <p>If you're not using mods and/or the mod is not causing the problem, try some of these hot fixes:</p>
+
+                    <ul>
+                        <li><strong>With mods:</strong> Remove all mods and relaunch the game.</li>
+                        <li>Run the game with administrative privlages.</li>
+                        <li>Whitelist the game's directory with your anti-virus software.</li>
+                        <li>Purge the cache files from your system. Don't worry, they'll be recreated when the game launches again.</li>
+                        <li><strong>Last resort:</strong> Do a full reinstall of the game.</li>
+                    </ul>
+
+                    <p>If none of these seemed to help you, then please visit our <a href="contact.html">contact us</a> page and submit a ticket. Be sure to include your "log.txt" file!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordian" id="faq-accordian">
+            <div class="card m-b-0">
+                <div class="card-header collapsed" aria-expanded="true" data-toggle="collapse" data-parent-"accordian" href="#card-2">
+                    <a class="card-title"><h3>When is the next game update?</h3></a>
+                </div>
+
+                <div class="card-block collapse" id="card-2">
+                    <p>As of right now, we have no set update schedule. Our team is pretty small. Small updates happen fairly quickly, but larger updates can take us a long time to publish.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordian" id="faq-accordian">
+            <div class="card m-b-0">
+                <div class="card-header collapsed" aria-expanded="true" data-toggle="collapse" data-parent-"accordian" href="#card-3">
+                    <a class="card-title"><h3>Sample Question 3</h3></a>
+                </div>
+
+                <div class="card-block collapse" id="card-3">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <img src="./img/header_logo_blackwhite.png" alt="">
+                    <hr class="light">
+                    <p>Phone # here</p>
+                    <p>crdgibberishproductions.@gmail.com</p>
+                    <p>Street address</p>
+                    <p>Springfield, Missouri, 65803</p>
+                </div>
+
+                <div class="col-md-6">
+                    <hr class="light">
+                    <ul class="navbar-nav">
+                        <!-- <li class="nav-item"><a class="nav-link" href="legal.html">Legal</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                        <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12">
+                    <hr class="light-bottom">
+                    <p>&copy; 2019, Gibberish Productions LLC. All rights reserved. Unreal Engine and its logo are registered trademarks of Epic Games, Inc. in the US and elsewhere. Gibberish Productions LLC and its logo are registered trademarks within the US.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstraps required JavaScript plugins -->
+    <!-- jQuery first, Popper.js, then JavaScript -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome's JavaScript file -->
+    <script src="./fa/js/all.min.js"></script>
+
+    <!-- in_house script -->
+    <script src="./js/in_house/main.js"></script>
+
+</body>
+
 </html>

@@ -1,132 +1,195 @@
 <!DOCTYPE html>
-
 <html lang="en-US">
 
-	<head>
-		<meta charset="utf-8"> <!-- Unicode web standard -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Enables the page to be responsive (mobile friendly) -->
-		
-		<!-- SEL meta tags. These can change at any time -->
-		<meta name="description" content=""> <!-- Get input from Ray -->
-		<meta name="keywords" content="video game developer, game studio, indie developer">
-		<meta name="author" content="Gibberish Productions LLC"> <!-- Ray has final say on author name -->
-		
-		<title>Gibberish Productions | Home</title>
-		
-		<!-- Bootstrap stylesheet. Deactivated for the time being -->
-		<!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
-		<!-- Font Awesome stylesheet -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-		<!-- Own stylesheet -->
-		<link rel="stylesheet" href="./css/styles.css">	
-		
-		<script>
-			// Only start audio after the page has fully loaded
-			window.addEventListener("load", initAudio);
-			
-			var audio, toggle;
-			function initAudio() {
-				// Will play audio when the page fully loads
-				audio = new Audio();
-				audio.src = "./audio/weightless.mp3";
-				audio.loop - true;
-				audio.play();
-				
-				toggle = document.getElementById("togglebtn");
-				toggle.addEventListener("click", playPause);
-				
-				// Toggles the background music on and off
-				function playPause() {
-					if(audio.paused) {
-						audio.play();
-					} else {
-						// When toggled off, reset the time stamp
-						// Toggling audio again will play it from the beginning
-						audio.pause();
-						audio.currentTime = 0;
-					}
-				}
-			}
-		</script>
-		
-	</head>
+<head>
+    <meta charset="utf-8"> <!-- Unicode web standard -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Enables the page to be responsive (mobile friendly) -->
 
-	<body>
-	
-		<header>
-			
-			<!-- Where should this be placed? -->
-			<button id="togglebtn" style="font-size:20px;"><i class="fas fa-volume-up"></i><br>Toggle<br>Music</button>
-			
-			<div class="container">
-				<div id="branding">
-					<img src="./img/header_logo.png" alt="Gibberish Productions LLC name and logo">
-				</div>
-				
-				<nav>
-					<ul>
-						<li class="current"><a href="index.html">Home</a></li>
-						<li><a href="games.html">Games</a></li>
-						<li><a href="about.html">About</a></li>
-					</ul>
-				</nav>
-			</div>
-		</header>
-		
-		<section id="showcase">
-			<div class="container">
-				<h1><span class="highlight">Gibberish</span> <span style="color:#39c6de;">Productions LLC</span></h1>
-				<p>Outrageous content for the world's entertainment!</p>
-			</div>
-		</section>
-		
-		<section id="social">
-			<div class="container">
-				<h1>Follow Us On Social Media</h1> <!-- Discord?, Facebook?, Twitter?, Any others? -->
-				<div id="social-icons">
-					<!-- All icons are just placeholders until final say is given. -->
-					<a href="https://discordapp.com/channels/534879482775994386/534879483342094367" target="_blank"><i class="fab fa-discord"></i></a>
-					<a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-					<a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
-					<a href="#"><i class="fab fa-instagram" target="_blank"></i></a>
-					<!-- Instagram doesn't appear to link properly -->
-				</div>
-			</div>
-		</section>
-		
-		<section class="content">
-			<section id="boxes">
-				<div class="container">
-					<div class="box">
-						<a href="https://www.unrealengine.com/en-US/what-is-unreal-engine-4"  target="_blank"><img src="./img/Unreal_Engine_Black.png" alt="Unreal Engine 4 logo and wordmark" onmouseover="this.src='./img/Unreal_Engine_Black_Hover.png'" onmouseout="this.src='./img/Unreal_Engine_Black.png'"></a>
-						<h3 style="margin-top:0px;">Powered by Unreal Technology</h3>
-						<p>To bring you the highest quality and most beautiful games possible, we use the power of Unreal Engine 4! You can learn more about the Unreal Engine and what it can do by clicking the icon above.</p>
-					</div>
-					
-					<div class="box">
-						<a href="faq.html" style="color:#000000"><i class="fas fa-comments"></i></a>
-						<h3>FAQs</h3>
-						<p>Have a question you need answered? Looking for technical support? Start here. If you're experiencing a problem, chances are we have a solution for you!</p>
-					</div>
-					
-					<div class="box">
-						<a href="contact.html" style="color:#000000"><i class="fas fa-mail-bulk"></i></a>
-						<h3>Contact Us</h3>
-						<p>If the FAQ section was unable to answer any of your questions, or fix any problems you may be experiencing, you may contact us for more specialized support.</p>
-					</div>
-				</div>
-			</section>
-		</section>
-		
-		<footer>
-			<p>&copy; 2019, Gibberish Productions LLC. All rights reserved. Unreal Engine and its logo are registered trademarks of Epic Games, Inc. in the US and elsewhere. Gibberish Productions LLC and its logo are registered trademarks within the US.</p>
-		</footer>
-		
-		<!-- Bootstraps required JavaScript plugins -->
-		<!-- jQuery first, Popper.js, then JavaScript -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="./js/bootstrap.min.js"></script>
-	</body>
+    <!-- SEL meta tags. These can change at any time -->
+    <meta name="description" content=""> <!-- Get input from Ray -->
+    <meta name="keywords" content="video game developer, game studio, indie developer">
+    <meta name="author" content="Gibberish Productions LLC"> <!-- Ray has final say on author name -->
+
+    <title>Gibberish Productions | Home</title>
+
+    <!-- Stylesheets -->
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="./css/bootstrap/bootstrap.min.css">
+    <!-- Font Awesome stylesheet -->
+    <link rel="stylesheet" href="./fa/css/all.min.css">
+    <!-- Own stylesheet -->
+    <link rel="stylesheet" href="./css/in_house/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./img/showcase_logo.png">
+
+    <!-- Script for music button. Disabled for the time being -->
+    <!--
+    <script>
+        // Only start audio after the page has fully loaded
+        window.addEventListener("load", initAudio);
+
+        var audio, toggle;
+
+        function initAudio() {
+            // Will play audio when the page fully loads
+            audio = new Audio();
+            audio.src = "./audio/weightless.mp3";
+            audio.loop - true;
+            audio.play();
+
+            toggle = document.getElementById("togglebtn");
+            toggle.addEventListener("click", playPause);
+
+            // Toggles the background music on and off
+            function playPause() {
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    // When toggled off, reset the time stamp
+                    // Toggling audio again will play it from the beginning
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+            }
+        }
+    </script>
+    -->
+</head>
+
+<body>
+
+    <!-- Where should this be placed? -->
+    <!--
+    <button id="togglebtn"><i class="fas fa-volume-up"></i><br>Toggle<br>Music</button>
+    -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md navbar-light sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><img src="./img/header_logo.png" alt="Gibberish Productions LLC"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#NavbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="NavbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+		            <!--<li class="nav-item"><i class="fas fa-volume-up"></i> Music</li> Fix this -->
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <!-- Showcase -->
+    <div id="showcase" class="carousel slide" data-ride="carousel">
+        <!-- Indicators can be used for when more images are added to the carousel. -->
+        <!-- They're hidden for now in the CSS file -->
+        <ul class="carousel-indicators">
+            <li data-target="#showcase" data-slide-to="0" class="active"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/showcase_unreal.png" alt="Showcase of unreal engine">
+                <div class="carousel-caption">
+                    <h1 class="display-2"><span class="highlight">Gibberish</span> Productions</h1>
+                    <h3><strong>Outrageous</strong> content for the <strong>world's</strong> entertainment!</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Section -->
+    <div class="container-fluid">
+        <div class="row jumbotron">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-9">
+                <h3>Follow us on social media!</h3>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-3" id="social">
+                <a href="https://discordapp.com/channels/534879482775994386/534879483342094367" target="_blank"><i class="fab fa-discord"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram" target="_blank"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Misc Links -->
+    <div class="container-fluid padding">
+        <div class="row text-center padding">
+            <!-- Unreal Engine -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <a class="unreal-logo" href="https://www.unrealengine.com/en-US/what-is-unreal-engine-4"  target="_blank"><img src="./img/Unreal_Engine_Black.png" alt="Unreal Engine 4 logo and wordmark" onmouseover="this.src='./img/Unreal_Engine_Black_Hover.png'" onmouseout="this.src='./img/Unreal_Engine_Black.png'"></a>
+				<h3>Powered by Unreal Technology</h3>
+				<p>To bring you the highest quality and most beautiful games possible, we use the power of Unreal Engine 4! You can learn more about the Unreal Engine and what it can do by clicking the icon above.</p>
+            </div>
+
+            <!-- FAQ section -->
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <a href="faq.html"><i class="fas fa-comments"></i></a>
+				<h3>FAQs</h3>
+				<p>Have a question you need answered? Looking for technical support? Start here. If you're experiencing a problem, chances are we have a solution for you!</p>
+            </div>
+
+            <!-- Contact Us section -->
+            <div class="col-sm-12 col-md-4">
+                <a href="contact.html"><i class="fas fa-mail-bulk"></i></a>
+				<h3>Contact Us</h3>
+				<p>If the FAQ section was unable to answer any of your questions, or fix any problems you may be experiencing, you may contact us for more specialized support.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid padding">
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <img src="./img/header_logo_blackwhite.png" alt="">
+                    <hr class="light">
+                    <p>Phone # here</p>
+                    <p>crdgibberishproductions.@gmail.com</p>
+                    <p>Street address</p>
+                    <p>Springfield, Missouri, 65803</p>
+                </div>
+
+                <div class="col-md-6">
+                    <hr class="light">
+                    <ul class="navbar-nav">
+                        <!-- <li class="nav-item"><a class="nav-link" href="legal.html">Legal</a></li> -->
+                        <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                        <li class="nav-item"><a class="nav-link" href="games.html">Games</a></li>
+                        <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12">
+                    <hr class="light-bottom">
+                    <p>&copy; 2019, Gibberish Productions LLC. All rights reserved. Unreal Engine and its logo are registered trademarks of Epic Games, Inc. in the US and elsewhere. Gibberish Productions LLC and its logo are registered trademarks within the US.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- Bootstraps required JavaScript plugins -->
+    <!-- jQuery first, Popper.js, then JavaScript -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <!-- Font Awesome's JavaScript file -->
+    <script src="./fa/js/all.min.js"></script>
+
+    <!-- in_house script -->
+    <script src="./js/in_house/main.js"></script>
+
+</body>
 
 </html>

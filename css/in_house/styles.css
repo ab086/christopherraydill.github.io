@@ -1,0 +1,389 @@
+/*---Global Styling --*/
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    background-color: #eefafe;
+}
+
+.padding {
+    padding-bottom: 32px;
+}
+
+.carousel-indicators {
+    display: none;
+}
+
+.nothing-text {
+    text-align: center;
+    font-weight: bold;
+    color: #103979;
+}
+
+/*---Navbar Styling --*/
+.navbar {
+    padding: 0.8rem;
+    background-color: #eefafe;
+}
+
+.navbar-nav li {
+    padding-right: 20px;
+}
+
+.nav-link {
+    font-size: 1.1rem !important;
+}
+
+/*---Showcase Styling --*/
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%);
+}
+
+.carousel-caption h1 {
+    font-size: 700%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px #000000;
+    color: #39c6de;
+}
+
+.carousel-caption h3 {
+    font-size: 200%;
+    font-weight: 500;
+    text-shadow: 1px 1px 10px #000000;
+}
+
+span.highlight {
+    color: #103979;
+}
+
+/*---Jumbotron Styling --*/
+.jumbotron {
+    padding: 16px;
+    border-radius: 0;
+    background-color: #080808;
+    color: #39c6de;
+    font-size: 30px;
+    text-align: center;
+}
+
+.jumbotron h3 {
+    font-size: 56px;
+}
+
+.jumbotron a {
+    color: #39c6de;
+    font-size: 200%;
+    padding-right: 10px;
+    float: right;
+}
+
+.jumbotron a:hover {
+    color: #bd6370;
+}
+
+/*---Misc Links --*/
+.fa-comments, .fa-mail-bulk {
+    color: #000000;
+    font-size: 175px;
+    margin: 16px;
+}
+
+a.unreal-logo img {
+    width: 30%;
+    height: auto;
+}
+
+.fa-comments:hover, .fa-mail-bulk:hover {
+    color: #39c6de;
+}
+
+.jumbotron #faq-h2 {
+    text-align: center;
+}
+
+/*---Ticket Box Styling --*/
+#ticket-box {
+    background-color: #020202;
+    color: #ffffff;
+    border: 3px solid #bd6370;
+    padding: 16px;
+}
+
+#ticket-box .btn {
+    background-color: #39c6de;
+}
+
+#ticket-box .btn:hover {
+    background-color: #103979;
+}
+
+#ticket-box #required {
+    color: #ff0000;
+}
+
+/*---Footer Styling --*/
+footer {
+    background-color: #080808;
+    color: #d5d5d5;
+    padding-top: 32px;
+}
+
+footer a {
+    color: #d5d5d5;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #323232;
+}
+
+footer div.container-fluid.padding {
+    padding-bottom: 0;
+}
+
+hr {
+    border-top: 1px solid #000000;
+    width: 75%;
+}
+
+hr.light {
+    border-top: 1px solid #d5d5d5;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+    width: 75%;
+}
+
+hr.light-bottom {
+    border-top: 1px solid #d5d5d5;
+    margin-top: 0.8rem;
+    width: 100%
+}
+
+/*---Modal Styling Override --*/
+.card-body {
+    background-color: #eefafe;
+    border: 2px solid #103979;
+}
+
+.modal-header {
+    background-color: #39c6de;
+    border-radius: 0;
+    color: #103979;
+    font-weight: bold;
+    text-align: right;
+}
+
+.modal-body {
+    background-color: #eefafe;
+}
+
+.modal-footer {
+    background-color: #39c6de;
+    border-radius: 0;
+    color: #103979;
+    font-weight: bold;
+}
+
+.btn-outline-secondary {
+    color: #103979;
+    border: 1px solid #103979;
+    border-radius: 0;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #103979;
+    border: 1px solid #103979;
+    color: #39c6de;
+}
+
+/*---FAQ Page Styling --*/
+
+.faq-container {
+    padding-bottom: 32px;
+}
+
+.faq-container h2 {
+    text-align: center;
+}
+
+#faq-accordian .card-header {
+    cursor: pointer;
+    color: #103979;
+    background-color: #39c6de;
+    border: 2px solid #bd6370;
+    padding: 10px 0 0 10px;
+    font-variant: small-caps;
+    letter-spacing: 3px;
+}
+
+.accordian .card-header h3 {
+    position: relative;
+}
+
+.accordian .card-header h3:after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-size: inherit;
+}
+
+.card-header .active h3:after {
+    content: "-";
+    position: absolute;
+    right: 20px;
+    font-size: inherit;
+}
+
+.accordian .card-block {
+    padding: 10px;
+    background-color: #eefafe;
+    border: 2px solid #bd6370;
+}
+
+/*---Media Queries --*/
+@media screen and (max-width: 1020px) {
+  .carousel-caption {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  .carousel-caption h1 {
+      font-size: 700%;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 10px #000000;
+      color: #39c6de;
+  }
+
+  .carousel-caption h3 {
+      font-size: 200%;
+      font-weight: 500;
+      text-shadow: 1px 1px 10px #000000;
+  }
+}
+@media screen and (max-width: 992px) {
+
+  .jumbotron a {
+    float: none;
+    text-align: center;
+  }
+
+  .carousel-caption h1 {
+      font-size: 600%;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 10px #000000;
+      color: #39c6de;
+  }
+
+  .carousel-caption h3 {
+      font-size: 200%;
+      font-weight: 500;
+      text-shadow: 1px 1px 10px #000000;
+  }
+}
+
+@media screen and (max-width: 854px) {
+  .carousel-caption h1 {
+      font-size: 500%;
+      text-transform: uppercase;
+      text-shadow: 1px 1px 10px #000000;
+      color: #39c6de;
+  }
+
+  .carousel-caption h3 {
+      font-size: 200%;
+      font-weight: 500;
+      text-shadow: 1px 1px 10px #000000;
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-caption {
+        top: 45%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 350%;
+    }
+
+    .carousel-caption h3 {
+        font-size: 140%;
+        font-weight: 400;
+        padding-bottom: 0.2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .carousel-caption {
+        top: 40%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 250%;
+    }
+
+    .carousel-caption h3 {
+        font-size: 110%;
+    }
+
+    /*---For future added images to the carousel --*/
+    .carousel-indicators {
+        display: none;
+    }
+}
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+    transition: -webkit-transform 0.5s ease;
+    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-backface-visibility: visible;
+    backface-visibility: visible;
+}
+
+/*--- Fixed Background Image --*/
+figure {
+    position: relative;
+    width: 100%;
+    height: 60%;
+    margin: 0 !important;
+}
+
+.fixed-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
